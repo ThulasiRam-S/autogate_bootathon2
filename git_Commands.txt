@@ -1,0 +1,8 @@
+git init 
+git remote -v (info about remote)
+git remote add <remote name> <link to repo>
+git add . 
+git commit -m "message"
+git push -u <remote name> <branch name>
+
+git pull <repo link>
