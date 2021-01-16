@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+ul li{
+    list-style-type: none;
+    display: inline;
+    padding-left: 150px;
+}
+ul a
+{
+    text-decoration: none;
+    color: black;
+}
+ul 
+{
+    padding-top: 50px;
+}
+.img
+{
+    height: 600px;
+}
