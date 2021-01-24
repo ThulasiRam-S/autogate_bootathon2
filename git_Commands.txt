@@ -6,3 +6,5 @@ git commit -m "message"
 git push -u <remote name> <branch name>
 
 git pull <repo link>
+
+git checkout -b <branch name> - to select a branch
