@@ -10,9 +10,8 @@
  top: 0;
  bottom: 0;
  right: 0;
- z-index: 1;
 background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 50%,rgba(2,0,36,1) 100%);
 opacity: .7;
 }
 table{
@@ -58,5 +57,16 @@ tr:nth-child(even){
     left: 5px;
     width: 300px;
     height: auto;
-    
+    z-index: 3;
+}
+button
+{
+	width: 100px;
+	float:right;
+	border: 0px;
+	margin-top: 20px;
+	margin-right: 30px;
+	border-radius: 25px;
+	 background-color: #00ade6;
+	 color: white;
 }

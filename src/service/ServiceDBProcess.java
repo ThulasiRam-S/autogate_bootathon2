@@ -42,19 +42,19 @@ public String displayissue(int issueid)
 }
 public ResultSet dropdownsp()
 {
-	ResultSet rs=null;
+	ResultSet rs2=null;
 	try {
 		ServiceDBConnect ob=new ServiceDBConnect();
 		Connection con=ob.getcon();
-		Statement st=con.createStatement();
-	    rs=st.executeQuery("SELECT spname,spId from serviceprovider where spworkstatus=0");
-	    return rs;
+		PreparedStatement pst1=con.prepareStatement("SELECT spname,spId from serviceprovider where spworkstatus=0"); 
+		rs2=pst1.executeQuery();
+	    return rs2;
 	}
 	catch(Exception e)
 	{
 		System.out.println("can't display free serviceproviders in dropdown!"+e.getMessage());
 	}
-	return rs;
+	return rs2;
 }
 public void updatesptoissue(int issueid,int spid)
 {

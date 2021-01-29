@@ -3,18 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-</script>
-<meta http-equiv = "refresh" content = "3; url = home.html" />
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <title>ServiceProvider Allotted</title>
-<style type="text/css">
-</style>
 </head>
 <body>
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Service Provider Allotted!</h4>
-  <p class="mb-0">Our service provider contact you soon.</p>
-</div>
+<script>
+setTimeout(function () { 
+	swal({
+	  title: "Sent Successfully!",
+	  text: "Our serviceprovider will contact you soon.",
+	  type: "success",
+	  confirmButtonText: "OK"
+	},
+	function(isConfirm){
+	  if (isConfirm) {
+	    window.location.href = "home.html";
+	  }
+	}); }, 500);
+</script>
 </body>
 </html>
