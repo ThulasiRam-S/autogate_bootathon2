@@ -39,10 +39,10 @@ context.setAttribute("Name",s);
 	    <div class="menu-bar">
 	    	<div class="row">
 	    		<div class="logo">
-	                <a href="products.jpg" class="logo" style="text-decoration: none;">Secure Gate Automation</a>
+	               <a href="home.html" class="logo" style="text-decoration: none;">Secure Gate Automation</a>
 	            </div>
 	            <ul class="nav" >
-	                <li><a href="products.jsp">Products</a></li>
+	                <li><a href="accessories.jsp">Back</a></li>
 	           </ul>
 	    	</div>
 	    </div>

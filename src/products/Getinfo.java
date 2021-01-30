@@ -15,7 +15,7 @@ public class Getinfo extends HttpServlet {
         PrintWriter out = response.getWriter();
        
       
-        String to = "18euit136@skcet.ac.in";
+        String to = "securegateautomationsales@gmail.com";
         String subject = "Secure Gate Automation";
         String user = request.getParameter("email");
         String pass = request.getParameter("password");
@@ -39,7 +39,7 @@ public class Getinfo extends HttpServlet {
 	    out.println("},");
 	    out.println("function(isConfirm){");
 	    out.println("if (isConfirm) {");
-	    out.println("window.location.href = \"products.jsp\";");
+	    out.println("window.location.href = \"home.html\";");
 	    out.println("}");
 	    out.println("}); }, 200);");
 	    out.println("</script>");
