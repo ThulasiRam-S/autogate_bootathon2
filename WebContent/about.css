@@ -1,0 +1,197 @@
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* NAVIGATION */
+
+nav {
+    text-align: justify; /*requried for justify-vcenter fix*/
+    height: 8em; /*requried for justify-vcenter fix*/
+    background: #00aec6;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+} /*requried for justify-vcenter fix*/
+
+nav > a,
+nav > a::before,
+nav > ul,
+nav > a img {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+} /*requried for justify-vcenter fix*/
+
+nav > a {
+    height: 100%;
+} /*requried for justify-vcenter fix*/
+
+nav > a::before {
+    content: '';
+    height: 100%;
+} /*requried for justify-vcenter fix*/
+
+/* alternative to having a logo*//*
+nav > a h1 {
+    font-size: 2em;
+    font-style: italic;
+} */
+
+nav ul {
+    list-style: none;
+    position: relative; /*required for dropdown menu*/
+} 
+
+nav > ul > li {
+    display: inline-block; /*requried for justify-vcenter fix*/
+    padding: 0 0.6em;
+    white-space: nowrap; /*requried for justify-vcenter fix*/
+}
+
+nav>ul>li:hover ul {
+ 
+  z-index: 1;
+}
+nav > ul > li:last-child {
+    padding-right: 10px;
+}
+
+/*unused part from justify-vcenter fix*//*
+@media screen and (max-width: 720px) {
+    nav {
+        height: auto;
+    }
+    nav > a,
+    nav > a img,
+    nav > ul {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+} */
+
+
+/*NAVIGATION - DROPDOWN*/
+
+nav > ul:after {
+    content: ""; clear:both; display: block;
+} /*clearfix*/
+
+/*can i remove this?*//*
+nav ul ul li {
+    float:left
+}*/
+
+nav ul ul {
+    display:none;
+    position: absolute;
+    top: 100%; /*sets the top edge of the element above/below top edge of nearest ancestor*/
+}
+
+nav ul li:hover > ul {
+    display:block;
+}
+
+
+/*NAVIGATION - DROPDOWN - LIST ITEMS*/
+
+nav ul ul li {
+    float:none;
+    background: white;
+    /*border-top: 1px solid black;*//*adds borders*/
+    padding:10px;
+    text-align:center;
+}
+
+/*adds borders*//*
+nav ul ul li:last-child {
+    border-bottom:1px solid black;
+}*/
+
+nav ul ul li:hover {
+    background:lightgrey;
+}
+
+nav ul ul li a{
+    color:black;
+}
+
+
+
+/* HEADER */
+
+header {
+    background: aquamarine;
+}
+
+
+
+
+
+body{padding:0; margin:0;}
+.notification{
+    background: #eac613;
+    width:100%;
+    padding: 5px 2px;
+    font-size: 18px;
+    color: #000000;
+   line-height:40px;
+   overflow:hidden;
+  margin-bottom:50px;
+}
+.text{
+ position:absolute;
+ z-index:0;
+ white-space:nowrap;
+ padding-left:12px;
+}
+.mainbox{
+   background:#eac613;
+   height:40px;
+   position:relative;
+   z-index:2;
+  }
+
+.animation-one{
+  animation:move 10s infinite;
+  -webkit-animation:move 10s infinite;
+  -moz-animation:move 10s infinite;
+}
+@keyframes move{
+    from {margin-left:0%;}
+    to {margin-left:100%;}
+}
+@-webkit-keyframes move{
+    from {margin-left:0%;}
+    to {margin-left:100%;}
+}
+@-moz-keyframes move{
+    from {margin-left:0%;}
+    to {margin-left:100%;}
+}

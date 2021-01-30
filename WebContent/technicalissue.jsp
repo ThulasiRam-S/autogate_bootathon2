@@ -26,9 +26,9 @@ function validateissue() {
           <div class="card-body">
             <h5 class="card-title text-center">Technical Issue</h5>
             <form  name="techissue"  action="UserTechIssue" onsubmit="return validateissue()">
-              <div class="form-label-group pt-3">
+              <!--  <div class="form-label-group pt-3">
                 <input type="int" name="userId" placeholder="userid" class="form-control" >
-              </div>
+              </div> -->
               <div class="form-label-group py-3">
                 <textarea name="issue" rows="5" cols="30" placeholder="issue"></textarea>
               </div>

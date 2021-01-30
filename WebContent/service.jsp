@@ -115,6 +115,16 @@ padding-left:40px;
 <body>
 
 <!--get session from login page and if session empty redirect to user login else stay in the servie page -->
+<%
+HttpSession ses=request.getSession(true);
+if((ses.getAttribute("userIdClient"))==null)
+{
+RequestDispatcher rd=request.getRequestDispatcher("userlogin.html");
+rd.forward(request,response);
+}
+else
+{
+%>
 <div class="splitleft left">
   <div class="centered">
   <!-- <img alt="serviceicon" src="serviceicon.png" > -->
@@ -150,5 +160,8 @@ padding-left:40px;
   <a href="technicalissue.jsp" class="button">Technical Issue</a>
   <a href="home.html" class="button">Back</a>
 </div>
+<%
+}
+%>
 </body>
 </html>

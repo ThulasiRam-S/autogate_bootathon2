@@ -29,7 +29,7 @@ try {
     ResultSet rst=pst.executeQuery("SELECT issueId,issue from issue where issuestatus=1");
 %>
 <div class="filter">
-<a href="#"><button class="py-3">Back</button></a>
+<a href="adminpage.html"><button class="py-3">Back</button></a>
 </div>
 	<%
 if (!rst.isBeforeFirst() ) {  
@@ -45,7 +45,7 @@ setTimeout(function () {
 	},
 	function(isConfirm){
 	  if (isConfirm) {
-	    window.location.href = "IssueDisplaytoAdmin.jsp";
+	    window.location.href = "adminpage.html";
 	  }
 	}); }, 200);
 </script>

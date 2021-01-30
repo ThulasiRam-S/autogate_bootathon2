@@ -1,0 +1,260 @@
+@charset "ISO-8859-1";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* NAVIGATION */
+
+nav {
+    text-align: justify; /*requried for justify-vcenter fix*/
+    height: 8em; /*requried for justify-vcenter fix*/
+    background: #00aec6;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+} /*requried for justify-vcenter fix*/
+
+nav > a,
+nav > a::before,
+nav > ul,
+nav > a img {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+} /*requried for justify-vcenter fix*/
+
+nav > a {
+    height: 100%;
+} /*requried for justify-vcenter fix*/
+
+nav > a::before {
+    content: '';
+    height: 100%;
+} /*requried for justify-vcenter fix*/
+
+/* alternative to having a logo*//*
+nav > a h1 {
+    font-size: 2em;
+    font-style: italic;
+} */
+
+nav ul {
+    list-style: none;
+    position: relative; /*required for dropdown menu*/
+} 
+
+nav > ul > li {
+    display: inline-block; /*requried for justify-vcenter fix*/
+    padding: 0 0.6em;
+    white-space: nowrap; /*requried for justify-vcenter fix*/
+}
+
+nav>ul>li:hover ul {
+ 
+  z-index: 1;
+}
+nav > ul > li:last-child {
+    padding-right: 10px;
+}
+
+/*unused part from justify-vcenter fix*//*
+@media screen and (max-width: 720px) {
+    nav {
+        height: auto;
+    }
+    nav > a,
+    nav > a img,
+    nav > ul {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+} */
+
+
+/*NAVIGATION - DROPDOWN*/
+
+nav > ul:after {
+    content: ""; clear:both; display: block;
+} /*clearfix*/
+
+/*can i remove this?*//*
+nav ul ul li {
+    float:left
+}*/
+
+nav ul ul {
+    display:none;
+    position: absolute;
+    top: 100%; /*sets the top edge of the element above/below top edge of nearest ancestor*/
+}
+
+nav ul li:hover > ul {
+    display:block;
+}
+
+
+/*NAVIGATION - DROPDOWN - LIST ITEMS*/
+
+nav ul ul li {
+    float:none;
+    background: white;
+    /*border-top: 1px solid black;*//*adds borders*/
+    padding:10px;
+    text-align:center;
+}
+
+/*adds borders*//*
+nav ul ul li:last-child {
+    border-bottom:1px solid black;
+}*/
+
+nav ul ul li:hover {
+    background:lightgrey;
+}
+
+nav ul ul li a{
+    color:black;
+}
+
+
+
+/* HEADER */
+
+header {
+    background: aquamarine;
+}
+
+
+
+
+
+
+
+html {
+  font: 300 100%/1.5 Ubuntu, sans-serif;
+  color: #00aec6;
+  overflow-x: hidden;
+}
+h2 {
+  margin: 0;
+  color: #00aec6;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+#contact-form {
+  max-width: 1208px;
+  max-width: 75.5rem;
+  margin: 0 auto;
+  padding-top:50px;
+  padding-left:50px
+}
+#contact, label, input[name="submit"] {
+  position: relative;
+}
+label > span, input, textarea, button {
+  box-sizing: border-box;
+}
+label {
+  display: block;
+}
+label > span {
+  display: none;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  font: 300 100%/1.2 Ubuntu, sans-serif;
+}
+input[type="text"], input[type="email"], textarea {
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  outline: none;
+}
+input.invalid, textarea.invalid {
+  border-color: #d5144d;
+}
+textarea {
+  height: 6em;
+}
+input[type="submit"], button {
+  background: #00aec6;
+  color: #333;
+}
+input[type="submit"]:hover, button:hover {
+  background: #00aec6;
+}
+@media screen and (min-width: 30em) {
+  #contact-form h2 {
+    margin-left: 26.3736%;
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  label > span {
+    vertical-align: top;
+    display: inline-block;
+    width: 26.3736%;
+    padding: 0.5em;
+    border: 1px solid transparent;
+    text-align: right;
+  }
+  input, textarea, button {
+    width: 73.6263%;
+    line-height: 1.5;
+  }
+  textarea {
+    height: 10em;
+  }
+  input[type="submit"], button {
+    margin-left: 26.3736%;
+  }
+}
+@media screen and (min-width: 48em) {
+  #contact-form {
+    text-align: justify;
+    line-height: 0;
+  }
+  #contact-form:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  #contact-form h2 {
+    margin-left: 17.2661%;
+  }
+  #contact-form form, #contact-form aside {
+    vertical-align: top;
+    display: inline-block;
+    width: 65.4676%;
+    text-align: left;
+    line-height: 1.5;
+  }
+  #contact-form aside {
+    width: 30.9353%;
+  }
+}

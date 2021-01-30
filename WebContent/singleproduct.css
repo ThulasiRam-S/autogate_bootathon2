@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+
+.container{
+	margin-top: 240px;
+	margin-right: 100px;
+	width: 100%;
+	height: 70%;
+	
+}
+
+.col-md-5{
+	top: 10%;
+}
+.col-md-5 button{
+	margin-top: 45px;	
+	margin-left: 90px;
+}
+
+body{
+	margin: 0px;
+	border: 0px;
+	
+}
+.image{
+background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('logo_white_final.png');
+
+background-position: top;
+}
+  .table2{
+      margin-left: 70px;
+      margin-top: 10px;
+    border-collapse: collapse;
+    position: inherit;
+    height: auto;
+    
+}
+
+
+.table2 tr{
+   
+    border-collapse: collapse;
+    border-spacing: 0%;
+}
+.table2 td {
+	
+    width: 10.5em;
+    height: 2.5em;
+    text-align: center;
+    border-spacing: 0%;
+    border: 1px solid; color: black;
+    border-collapse: inherit;
+    padding: 10px;
+    
+  }
+  
+  
+.menu-bar{
+	background: rgb(0, 172, 230);
+    align-items:flex-end;
+    width: 100%;
+    height: 130px;
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: inherit;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    text-align: center;
+    top: 0;
+}
+.nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+   
+    margin-left: 150%;
+    font-size: large;
+     text-align: center;
+}
+
+
+.logo{
+    text-align: left;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 100px;
+	background: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+menu-bar ul{
+	display: block;
+	 text-align: center;
+	list-style: none;
+	color: #fff;	
+    align-items: center;
+    margin-right: 10%;
+}
+.menu-bar ul li{
+    width: 120px;
+	margin: 1px;
+    padding: 15px;
+   text-align: center;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+    color: #fff;
+    margin-top: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn-google {
+  color: white;
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

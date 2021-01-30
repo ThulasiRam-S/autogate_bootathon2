@@ -1,0 +1,159 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="adminaddsp.css">
+</head>
+<body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign Up</h3>
+				<div class="d-flex justify-content-end social_icon">
+				</div>
+			</div>
+			<div class="card-body">
+				<form name="myform" action="adminaddspServlet" method="post" onsubmit="return validateform()">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" name="name" class="form-control" placeholder="name" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+						</div>
+						<input type="text" name="emailid" class="form-control" placeholder="Email ID" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-phone"></i></span>
+						</div>
+						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-home"></i></span>
+						</div>
+						<input type="text" name="address" class="form-control" placeholder="Address" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-city"></i></span> 
+						</div>
+						<select name="city" required>
+            			<option>City</option>
+           				 <option>Chennai</option>
+           				 <option>Coimbatore</option>
+            			<option>Nammakal</option>
+           				 <option>Erode</option>
+           				 <option>Karur</option>
+        				</select>
+						
+					</div>
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" name="username" class="form-control" placeholder="username" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="password" class="form-control" placeholder="password" id="myInput" required>
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox" onclick="myFunction()">View Password
+					</div>
+					</br>
+					<div class="form-group">
+						<input type="submit" value="Add" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+    function validateform(){
+    	var phone=document.myform.phoneno.value;
+    	var password=document.myform.password.value;
+    	if (phone.length > 10 || phone.length < 10){
+      	  alert("Invalid Phone no.");
+      	  return false;
+      	} 	
+    	else if(password.length<8){
+    		  alert("Password must be at least 8 characters long.");
+    		  return false;
+        }
+    }
+    
+    /*function validateform(){
+    	var usname=document.myform.username.value;
+    	var password=document.myform.password.value;
+    	var emailadd=document.myform.emailid.value;
+    	var phone=document.myform.phoneno.value;
+    	var addr=document.myform.address.value;
+    	 
+        
+    	if (usname==null || usname==""){
+    	  alert("Invalid Username");
+    	  return false;
+    	}
+    	else if(password.length<6){
+    	  alert("Password must be at least 6 characters long.");
+    	  return false;
+    	 }
+    	else if(emailadd == ""){
+    		alert("Invalid Email Id");
+      	  return false;
+    	}
+    	else if(phone.length<10 || phone.length>10){
+    		alert("Invalid Phone Number");
+      	  return false;
+    	}
+    	else if( addr == ""){
+    		alert("Invalid Address");
+      	  return false;
+    	}
+    	else if(cit.equals("City")){
+    		alert("Select City");
+      	  return false;
+    	}
+    	
+    }*/
+    
+    
+    	
+    	
+ 
+    </script>
+</body>
+</html>

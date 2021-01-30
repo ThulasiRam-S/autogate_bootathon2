@@ -10,7 +10,12 @@ public class TechIssue extends HttpServlet
     {
       response.setContentType("text/html");
       PrintWriter out=response.getWriter();
-      int userId=Integer.parseInt(request.getParameter("userId"));
+      HttpSession sess=request.getSession(true);
+      int userId;
+      Object ob=sess.getAttribute("userIdClient");
+      userId=(int)ob;
+      System.out.print(userId);
+      //int userId=Integer.parseInt(request.getParameter("userId"));
       String issue=request.getParameter("issue");
       ServiceDBProcess setissue=new ServiceDBProcess();
       int completed=setissue.issuetodb(userId, issue);
