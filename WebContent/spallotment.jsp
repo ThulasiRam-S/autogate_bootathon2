@@ -36,7 +36,7 @@ String issuedetails=serv.displayissue(issueid);
 //out.println(issuedetails);
 %>
 <div class="form-label-group">
-Issue details
+Issue details  :
 <%
 out.println(issuedetails);
 %>
